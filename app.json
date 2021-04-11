@@ -1,0 +1,47 @@
+{
+  "expo": {
+    "name": "5-Tenedores",
+    "slug": "5-Tenedores",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {
+      "package": "com.daniellabra.cincotenedores",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC4lUISolTFzWJUFSa8Qgv4BJhItJuehM8"
+        }
+      },
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+        
+      },
+      "permissions": ["MEDIA_LIBRARY", 
+                      "READ_EXTERNAL_STORAGE", 
+                      "WRITE_EXTERNAL_STORAGE",
+                      "ACCESS_COARSE_LOCATION",
+                      "ACCESS_FINE_LOCATION",
+                      "LOCATION"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "description": ""
+    
+  }
+}

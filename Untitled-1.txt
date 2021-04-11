@@ -1,0 +1,16 @@
+api key: AIzaSyC4lUISolTFzWJUFSa8Qgv4BJhItJuehM8
+
+Keystore credentials
+  Keystore password: e10b66346cb54dacb6ea826526fd0328
+  Key alias:         QGRsYWJyYXNpbHZhLzUtVGVuZWRvcmVz
+  Key password:      475a2b35b7474c66bd61f280edf25f8e
+
+
+dlabrasilva/5-Tenedores
+  Upload Keystore hashes
+    Google Certificate Fingerprint:     AB:9F:F4:50:A8:E7:47:59:CC:D1:B6:EF:1F:7B:3F:A7:23:0F:D4:BB
+    Google Certificate Hash (SHA-1):    AB9FF450A8E74759CCD1B6EF1F7B3FA7230FD4BB
+    Google Certificate Hash (SHA-256):  E19949A2C284A8787C13062FF2B2F2B8ECAB661EECF1D6D9954219E85BA54859
+    Facebook Key Hash:                  q5/0UKjnR1nM0bbvH3s/pyMP1Ls=
+  Push Notifications credentials
+    FCM Api Key:  ---------------------
