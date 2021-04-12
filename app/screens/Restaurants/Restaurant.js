@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { StyleSheet, Text, View, ScrollView, Dimensions } from 'react-native'
-import { Rating } from "react-native-elements";
+import { map } from "lodash"
+import { Rating, ListItem, Icon } from "react-native-elements";
 import Loading from "../../components/Loading";
 import Carousel from "../../components/Carousel";
+import Map from "../../components/Mapa";
 
 import { firebaseApp } from "../../utils/firebase"
 import firebase from "firebase/app";
@@ -50,6 +52,11 @@ export default function Restaurant(props) {
                 description = {restaurant.description }
                 rating = { rating }
             />
+            <RestaurantInfo 
+                location = { restaurant.location }
+                name= { restaurant.name }
+                address = {restaurant.address }
+            />
         </ScrollView>
     )
 }
@@ -69,6 +76,43 @@ function TitleRestaunrat(props) {
                 />
             </View>
             <Text style = {styles.descriptionRestaurant}>{ description }</Text>
+        </View>
+    )
+}
+function RestaurantInfo(props){
+    const { location, name, address } = props;
+
+    const listInfo = [{
+        text: address,
+        iconName: "map-marker",
+        iconType: "material-community",
+        action: null,
+    }];
+
+    // console.log(listInfo);
+
+    return (
+        <View styles = { styles.viewRestaurantInfo }>
+            <Text style = { styles.restaurantInfoTitle }>Informacíon sobre el restaurante</Text>
+            <Map 
+                location = { location } 
+                name = { name}
+                height = {200}
+                disable
+            />
+            {map(listInfo, (item, index) => (
+                <ListItem 
+                    key = {index}
+                    title = { item.text }
+                    leftIcon = {{
+                        name: item.iconName,
+                        type: item.iconType,
+                        color: "#00a680"
+                    }}
+                    containerStyle = { styles.containerListItem }
+                />
+            ))}
+
         </View>
     )
 }
@@ -92,6 +136,19 @@ const styles = StyleSheet.create({
     rating: {
         position: "absolute",
         right: 0
+    },
+    viewRestaurantInfo: {
+        margin: 15,
+        marginTop: 25
+    },
+    restaurantInfoTitle: {
+        fontSize: 20,
+        fontWeight: "bold",
+        marginBottom: 10
+    },
+    containerListItem: {
+        borderBottomColor: "#d8d8d8",
+        borderBottomWidth: 1
     }
 
 })
